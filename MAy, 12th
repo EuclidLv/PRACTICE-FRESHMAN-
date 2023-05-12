@@ -1,0 +1,176 @@
+//C++ Primer Plus Chapter 5          5.9
+
+//1
+#include <iostream>
+int main()
+{
+	using namespace std;
+	int i = 0;
+	int num1=0, num2=0,count =0;
+	cout << "Enter a intage: ";
+	cin >> num1;
+	cout << endl;
+	cout << "Enter a intage: ";
+	cin >> num2;
+	int p1=0, p2=0;
+	if (num1 > num2)
+		 p1 = num1 - num2;
+	else
+		 p2 = num2 - num1;
+	if (p1)
+	{
+		for (i = 0; i <= p1; i++)
+		{
+			count += num2+i;
+		}
+	}
+	if (p2)
+	{
+		
+		for ( i = 0; i < (p2 + 1); i++)
+			count += num1+ i;
+	}
+	cout << "the figure is: " << count;
+	return 0;
+}
+
+
+
+
+
+//2
+#include <iostream>
+#include <array>
+const int ArSize = 16;
+int main()
+{
+	std::array<long double, ArSize>powerd{};
+	powerd[0] = powerd[1] = 1.0;
+	for (int i = 2; i < ArSize; i++)
+		powerd[i] = powerd[i - 1] * i;
+	for (int i = 0; i < ArSize; i++)
+		std::cout << i << "! = " << powerd[i] << std::endl;
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+//3
+#include <iostream>
+int main()
+{
+	using namespace std;
+	int sum = 0;                            // sum all figure
+	int figure = 0;                         //to get the figure the user entered
+	cout << "Enter a number: ";
+	cout << endl;
+	cin >> figure;
+	while (figure != 0)
+	{
+		cout << "what you entered just now is: " << figure << endl;
+		sum += figure;
+		cout << "up to now the summation of your entered figure is: " << sum << endl;
+		cout << "Enter a number: ";
+		cin >> figure;
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//4
+#include <iostream>
+double payforDahne(double n);
+double payforCleo(double n);
+int main()
+{
+	using namespace std;
+	double dollerDahne = 100, dollerCleo = 100;
+	while (dollerCleo <= dollerDahne)
+	{
+		dollerDahne = payforDahne(dollerDahne);
+		dollerCleo = payforCleo(dollerCleo);
+	}
+	cout << "now Cleo gets more than Dahne and Cleo has: " << dollerCleo << "Dahne has: " << dollerDahne << endl;
+	return 0;
+}
+
+double payforDahne(double n)
+{
+	double pay1 = 100 * 1.10;
+	return pay1;
+}
+
+double payforCleo(double n)
+{
+	double pay2 = n * 1.05;
+	return pay2;
+}
+
+
+
+
+
+//5
+//error
+#include <iostream>
+const int month =12,sales= 12;
+
+int main()
+{
+	using namespace std;
+	const char* Months[month] =
+	{
+		"Janury",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"November",
+		"Octomber",
+		"December"
+	};
+	int total[sales][month];
+	for (int i = 0; i < sales; i++)
+	{
+		cout << "sales books is: ";
+		cin >> total[sales][month];
+	}
+	cout << "the result is here" << endl << endl;
+	for (int Month = 0; Month < month; Month++)
+	{
+		cout << Months[Month] << ":\t";
+		for (int p = 0; p < sales; p++)
+			cout << total[p][Month] << ":\t";
+		cout << endl;
+	}
+	
+	return 0;
+}
+
+
+
+
+
+
+
+
