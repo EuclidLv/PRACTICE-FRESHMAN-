@@ -217,6 +217,7 @@ int main()
 	{
 		cout << pcar[i].year << "          "  << pcar[i].make << endl;
 	}
+	delete[car_num]pcar;
 	return 0;
 }
 
@@ -226,6 +227,39 @@ int main()
 
 
 
+//8
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main() {
+    cout << "Enter words (to stop, type the word done):" << endl;
+    char ch[20];
+    int count = 0;
+    while ((cin >> ch) && strcmp(ch, "done"))
+        count++;
+    cout << count << endl;
+    return 0;
+}
+
+
+
+
+
+
+//9
+#include<iostream>
+#include<string>
+using namespace std;
+int main() {
+    cout << "Enter words (to stop, type the word done):" << endl;
+    string word;
+    int count = 0;
+    while ((cin >> word) && (word != "done"))
+        count++;
+    cout << count << endl;
+    return 0;
+}
 
 
 
@@ -234,7 +268,28 @@ int main()
 
 
 
-
+//10
+#include <iostream>
+using namespace std;
+int main()
+{
+	int star = 0, dot = 0;
+	cout << "How many lines you wanna print:";
+	cin >> star;
+	cout << "\n" << "Here comes the line we print for you\n\n\n";
+	for (int i = 1; i <= star; i++)
+	{
+		dot = star - i;
+		for (int j = dot; j > 0; j--)
+		{
+			cout << ".";
+		}
+		for (int m = i; m > 0; m--)
+			cout << "*";
+		cout << endl;
+	}
+	return 0;
+}
 
 
 
