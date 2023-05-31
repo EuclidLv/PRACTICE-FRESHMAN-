@@ -1,0 +1,3 @@
+﻿  源.cpp
+E:\C++ Primer Plus\IO experiment\May,15th\fstream_test_1\fstream_test_1\源.cpp(12,2): warning C4091: “typedef ”: 没有声明变量时忽略“bop”的左侧
+  fstream_test_1.vcxproj -> E:\C++ Primer Plus\IO experiment\May,15th\fstream_test_1\x64\Debug\fstream_test_1.exe
